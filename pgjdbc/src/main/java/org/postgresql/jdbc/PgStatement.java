@@ -414,6 +414,7 @@ public class PgStatement implements Statement, BaseStatement {
     // updateable result sets do not yet support binary updates
     if (concurrency != ResultSet.CONCUR_READ_ONLY) {
       flags |= QueryExecutor.QUERY_NO_BINARY_TRANSFER;
+      flags |= QueryExecutor.QUERY_NO_BINARY_TRANSFER;
     }
 
     Query queryToExecute = cachedQuery.query;
